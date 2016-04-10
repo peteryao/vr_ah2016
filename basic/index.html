@@ -1,0 +1,106 @@
+<html>
+  <head>
+    <script src="../build.js"></script>
+    <meta charset="utf-8"></meta>
+    <style>
+      body{
+        font-family: 'roboto', 'open sans', sans-serif;
+      }
+      .scoreboard{
+        background: linear-gradient(#c0cad0, #e0e0e0);
+        font-size: 30px;
+        color: black;
+        border: 5px solid #555;
+      }
+      .scoreboard h1{
+        padding: 22px;
+        margin: 0;
+        color: #555;
+        text-align: center;
+      }
+      .scoreboard center{
+        font-size: 64px;
+        margin: 24px;
+      }
+      .scoreboard table{
+        width: 95%;
+        border-collapse: collapse;
+        margin: 10px;
+        border-bottom: 1px solid #aaa;
+        font-size: 1em;
+      }
+      .scoreboard table td{
+        border-top: 1px solid #aaa;
+        padding: 10px;
+      }
+      .scoreboard table td:last-child{
+        text-align: right;
+      }
+      #goodbye{
+        font-size: 48px;
+        line-height: 64px;
+        background: #f70;
+        border: 1px solid #a30;
+      }
+      .tower{
+        font-size: 48px;
+      }
+      .tower ul{
+        margin: 0;
+        padding: 0;
+      }
+      .tower li{
+        list-style: none;
+        text-align: center;
+        border-bottom: 1px solid #ccc;
+        line-height: 128px;
+        height: 128px;
+        margin: 0;
+        padding: 0;
+        background: #eee;
+      }
+      .aww{
+        text-align: center;
+      }
+
+    </style>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <div id="hello" class="scoreboard">
+          <h1>Final Score!</b></h1>
+          <center>
+            ⚽
+          </center>
+
+          <table>
+            <tr><td>Country</td><td>Score</td></tr>
+            <tr><td>Germany</td><td>1</td></tr>
+            <tr><td>United Kingdom</td><td>0</td></tr>
+          </table>
+        </div>
+
+        <div id="goodbye">
+          <center>1</center>
+        </div>
+
+        <div class="tower">
+          <ul>
+            <li>🐴</li>
+            <li>🐮</li>
+            <li>🐷</li>
+            <li>🐹</li>
+          </ul>
+        </div>
+      </a-assets>
+
+      <a-sky color="#cef"></a-sky>
+      <a-entity id="grid" rotation="-90 0 0" geometry="primitive: plane; width: 64; height: 64;" material="repeat: 64 64; src: url(https://assets-scenevr-com.s3-us-west-1.amazonaws.com/prerelease/images/grid.png)"></a-entity>
+
+      <a-entity geometry="primitive: plane" position="10 4 -8" scale="4 4 0" draw="width: 512; height: 512;" htmltexture="asset: #hello"></a-entity>
+
+      <a-curvedimage color="#FFF" radius="36" theta-length="100" height="32" width="36" rotation="0 230 0" scale="-1 1 1" position="0 16 0" src="https://m0playscdntv-a.akamaihd.net/video/At6laIKpLIg/processed/480.mp4"></a-curvedimage>
+    </a-scene>
+  </body>
+</html>
