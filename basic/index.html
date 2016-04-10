@@ -64,43 +64,43 @@
       }
 
     </style>
+    <meta name="twitter:card" content="summary" />
   </head>
   <body>
     <a-scene>
       <a-assets>
+        <div id="imt_logo">
+          <img src="http://hydra-media.cursecdn.com/lol.gamepedia.com/e/ea/Immortals_Logo.png">
+        </div>
+
         <div id="hello" class="scoreboard">
-          <h1>Final Score!</b></h1>
-          <center>
-            ⚽
-          </center>
-
-          <table>
-            <tr><td>Country</td><td>Score</td></tr>
-            <tr><td>Germany</td><td>1</td></tr>
-            <tr><td>United Kingdom</td><td>0</td></tr>
-          </table>
-        </div>
-
-        <div id="goodbye">
-          <center>1</center>
-        </div>
-
-        <div class="tower">
-          <ul>
-            <li>🐴</li>
-            <li>🐮</li>
-            <li>🐷</li>
-            <li>🐹</li>
-          </ul>
+          <h1>Tweet!</b></h1>
+          <p>HASHTAG THAT SHIT</p>
+          <div>
+          </div>
         </div>
       </a-assets>
 
       <a-sky color="#cef"></a-sky>
       <a-entity id="grid" rotation="-90 0 0" geometry="primitive: plane; width: 64; height: 64;" material="repeat: 64 64; src: url(https://assets-scenevr-com.s3-us-west-1.amazonaws.com/prerelease/images/grid.png)"></a-entity>
 
-      <a-entity geometry="primitive: plane" position="10 4 -8" scale="4 4 0" draw="width: 512; height: 512;" htmltexture="asset: #hello"></a-entity>
-
+      <!-- This is the video -->
       <a-curvedimage color="#FFF" radius="36" theta-length="100" height="32" width="36" rotation="0 230 0" scale="-1 1 1" position="0 16 0" src="https://m0playscdntv-a.akamaihd.net/video/At6laIKpLIg/processed/480.mp4"></a-curvedimage>
+
+      <!-- Tweets of Hype -->
+      <a-entity geometry="primitive: plane" position="10 4 -8" scale="4 4 0" draw="width: 512; height: 512;" rotation="-45 0 0" htmltexture="asset: #hello">
+        <a-animation attribute="position" dur="100000" from="-13 0 -10" to="-13 0 200"></a-animation>
+        <!-- Animation will only play when the box is clicked. -->
+        <a-animation attribute="rotation" begin="click" repeat="indefinite" to="0 360 0"></a-animation>
+      </a-entity>
+     <a-entity>
+        <a-animation attribute="position" dur="10000" from="5 0 -10" to="50 0 200" begin="1000"></a-animation>
+        <a-image src="http://hydra-media.cursecdn.com/lol.gamepedia.com/e/ea/Immortals_Logo.png" height="10" width="10" rotation="135 0 135" position="0 0 0"></a-image>
+      </a-entity>
+      <a-entity>
+        <a-animation attribute="position" dur="10000" from="-7 0 -10" to="-7 0 200" begin="5000"></a-animation>
+        <a-image src="http://hydra-media.cursecdn.com/lol.gamepedia.com/e/ea/Immortals_Logo.png" height="10" width="10" rotation="135 0 135" position="0 0 0"></a-image>
+      </a-entity>
     </a-scene>
   </body>
 </html>
